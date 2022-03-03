@@ -1,0 +1,15 @@
+﻿Question 2: A new category was created called PEP (politically exposed person). Also, a new bool property IsPoliticallyExposed was created in the ITrade interface. 
+A trade shall be categorized as PEP if IsPoliticallyExposed is true. Describe in at most 1 paragraph what you must do in your design to account for this new category.
+
+Answer 2: Para validar o novo tipo de categoria, basta adicionar a checagem da propriedade "IsPoliticallyExposed" no método "GetCategory", se o valor for verdadeiro retorna a nova categoria "PEP".
+
+        public string GetCategory(DateTime referenceDate)
+        {
+            ...
+
+            if (this.IsPoliticallyExposed)
+                return "PEP";
+
+            ...
+
+        }
